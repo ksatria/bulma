@@ -3,6 +3,15 @@ title: Form controls
 layout: documentation
 doc-tab: form
 doc-subtab: general
+variables_controls_keys:
+- control-radius
+- control-radius-small
+- control-padding-vertical
+- control-padding-horizontal
+variables_form_keys:
+- label-color
+- label-weight
+- help-size
 ---
 
 {% capture example %}
@@ -18,10 +27,10 @@ doc-subtab: general
   <div class="control has-icons-left has-icons-right">
     <input class="input is-success" type="text" placeholder="Text input" value="bulma">
     <span class="icon is-small is-left">
-      <i class="fa fa-user"></i>
+      <i class="fas fa-user"></i>
     </span>
     <span class="icon is-small is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check"></i>
     </span>
   </div>
   <p class="help is-success">This username is available</p>
@@ -32,10 +41,10 @@ doc-subtab: general
   <div class="control has-icons-left has-icons-right">
     <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
     <span class="icon is-small is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope"></i>
     </span>
     <span class="icon is-small is-right">
-      <i class="fa fa-warning"></i>
+      <i class="fas fa-exclamation-triangle"></i>
     </span>
   </div>
   <p class="help is-danger">This email is invalid</p>
@@ -84,10 +93,10 @@ doc-subtab: general
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-primary">Submit</button>
+    <button class="button is-link">Submit</button>
   </div>
   <div class="control">
-    <button class="button is-link">Cancel</button>
+    <button class="button is-text">Cancel</button>
   </div>
 </div>
 {% endcapture %}
@@ -146,10 +155,10 @@ doc-subtab: general
   <p class="control has-icons-left has-icons-right">
     <input class="input" type="email" placeholder="Email">
     <span class="icon is-small is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope"></i>
     </span>
     <span class="icon is-small is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check"></i>
     </span>
   </p>
 </div>
@@ -157,7 +166,7 @@ doc-subtab: general
   <p class="control has-icons-left">
     <input class="input" type="password" placeholder="Password">
     <span class="icon is-small is-left">
-      <i class="fa fa-lock"></i>
+      <i class="fas fa-lock"></i>
     </span>
   </p>
 </div>
@@ -181,7 +190,7 @@ doc-subtab: general
       </select>
     </span>
     <span class="icon is-small is-left">
-      <i class="fa fa-globe"></i>
+      <i class="fas fa-globe"></i>
     </span>
   </p>
 </div>
@@ -191,12 +200,12 @@ doc-subtab: general
 <div class="field">
   <label class="label is-small">Small input</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-small" type="email" placeholder="Email">
+    <input class="input is-small" type="email" placeholder="Normal">
     <span class="icon is-small is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope"></i>
     </span>
     <span class="icon is-small is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check"></i>
     </span>
   </div>
 </div>
@@ -206,24 +215,24 @@ doc-subtab: general
 <div class="field">
   <label class="label">Normal input</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email">
+    <input class="input" type="email" placeholder="Extra small">
     <span class="icon is-small is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope fa-xs"></i>
     </span>
     <span class="icon is-small is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check fa-xs"></i>
     </span>
   </div>
 </div>
 
 <div class="field">
   <div class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email">
+    <input class="input" type="email" placeholder="Normal">
     <span class="icon is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope"></i>
     </span>
     <span class="icon is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check"></i>
     </span>
   </div>
 </div>
@@ -233,36 +242,36 @@ doc-subtab: general
 <div class="field">
   <label class="label is-medium">Medium input</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-medium" type="email" placeholder="Email">
+    <input class="input is-medium" type="email" placeholder="Extra small">
     <span class="icon is-small is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope fa-xs"></i>
     </span>
     <span class="icon is-small is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check fa-xs"></i>
     </span>
   </div>
 </div>
 
 <div class="field">
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-medium" type="email" placeholder="Email">
+    <input class="input is-medium" type="email" placeholder="Small">
     <span class="icon is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope fa-sm"></i>
     </span>
     <span class="icon is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check fa-sm"></i>
     </span>
   </div>
 </div>
 
 <div class="field">
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-medium" type="email" placeholder="Email">
+    <input class="input is-medium" type="email" placeholder="Normal">
     <span class="icon is-medium is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope"></i>
     </span>
     <span class="icon is-medium is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check"></i>
     </span>
   </div>
 </div>
@@ -272,48 +281,48 @@ doc-subtab: general
 <div class="field">
   <label class="label is-large">Large input</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-large" type="email" placeholder="Email">
+    <input class="input is-large" type="email" placeholder="Extra small">
     <span class="icon is-small is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope fa-xs"></i>
     </span>
     <span class="icon is-small is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check fa-xs"></i>
     </span>
   </div>
 </div>
 
 <div class="field">
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-large" type="email" placeholder="Email">
+    <input class="input is-large" type="email" placeholder="Small">
     <span class="icon is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope fa-sm"></i>
     </span>
     <span class="icon is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check fa-sm"></i>
     </span>
   </div>
 </div>
 
 <div class="field">
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-large" type="email" placeholder="Email">
-    <span class="icon is-medium is-left">
-      <i class="fa fa-envelope"></i>
-    </span>
-    <span class="icon is-medium is-right">
-      <i class="fa fa-check"></i>
-    </span>
-  </div>
-</div>
-
-<div class="field">
-  <div class="control has-icons-left has-icons-right">
-    <input class="input is-large" type="email" placeholder="Email">
+    <input class="input is-large" type="email" placeholder="Normal">
     <span class="icon is-large is-left">
-      <i class="fa fa-envelope"></i>
+      <i class="fas fa-envelope"></i>
     </span>
     <span class="icon is-large is-right">
-      <i class="fa fa-check"></i>
+      <i class="fas fa-check"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-large" type="email" placeholder="Large">
+    <span class="icon is-medium is-left">
+      <i class="fas fa-envelope fa-lg"></i>
+    </span>
+    <span class="icon is-medium is-right">
+      <i class="fas fa-check fa-lg"></i>
     </span>
   </div>
 </div>
@@ -595,7 +604,7 @@ doc-subtab: general
       <p class="control is-expanded has-icons-left">
         <input class="input" type="text" placeholder="Name">
         <span class="icon is-small is-left">
-          <i class="fa fa-user"></i>
+          <i class="fas fa-user"></i>
         </span>
       </p>
     </div>
@@ -603,10 +612,10 @@ doc-subtab: general
       <p class="control is-expanded has-icons-left has-icons-right">
         <input class="input is-success" type="email" placeholder="Email" value="alex@smith.com">
         <span class="icon is-small is-left">
-          <i class="fa fa-envelope"></i>
+          <i class="fas fa-envelope"></i>
         </span>
         <span class="icon is-small is-right">
-          <i class="fa fa-check"></i>
+          <i class="fas fa-check"></i>
         </span>
       </p>
     </div>
@@ -813,14 +822,7 @@ doc-subtab: general
       When combining several controls in a <strong>form</strong>, use the <code>.field</code> class as a <strong>container</strong>, to keep the spacing consistent.</p>
     </div>
 
-    <div class="columns">
-      <div class="column is-half">
-        {{ example }}
-      </div>
-      <div class="column is-half">
-        {% highlight html %}{{ example }}{% endhighlight %}
-      </div>
-    </div>
+    {% include snippet.html content=example more=true %}
 
     {% include anchor.html name="Form field" %}
 
@@ -921,10 +923,6 @@ doc-subtab: general
     </div>
 
     <div class="content">
-      <p>
-        <span class="tag is-success">New!</span>
-        <span class="tag is-info">0.4.2</span>
-      </p>
       <p>It can be useful to append a <a href="{{site.url}}/documentation/elements/button#static-button">static button</a>.</p>
     </div>
 
@@ -934,7 +932,7 @@ doc-subtab: general
       <p>Use the <code>is-expanded</code> modifier on the element you want to fill up the remaining space (in this case, the input):</p>
     </div>
 
-    {% include snippet.html content=addons_expanded_example horizontal=true clipped=true %}
+    {% include snippet.html content=addons_expanded_example horizontal=true more=true %}
 
     <div class="content">
       <p>If you want a full width select dropdown, pair <code>control is-expanded</code> with <code>select is-fullwidth</code>.</p>
@@ -943,7 +941,7 @@ doc-subtab: general
     {% include snippet.html content=addons_expanded_fullwidth_example %}
 
     <div class="content">
-      <p>Use the <code>has-addons-centered</code> or the <code>has-addons-right</code> modifers to alter the <strong>alignment</strong>.</p>
+      <p>Use the <code>has-addons-centered</code> or the <code>has-addons-right</code> modifiers to alter the <strong>alignment</strong>.</p>
     </div>
 
     {% include snippet.html content=addons_center_example %}
@@ -961,7 +959,7 @@ doc-subtab: general
     {% include snippet.html content=group_example %}
 
     <div class="content">
-        Use the <code>is-grouped-centered</code> or the <code>is-grouped-right</code> modifers to alter the <strong>alignment</strong>.
+        Use the <code>is-grouped-centered</code> or the <code>is-grouped-right</code> modifiers to alter the <strong>alignment</strong>.
       </p>
     </div>
 
@@ -979,15 +977,24 @@ doc-subtab: general
 
     <div id="form-group-multiline" class="content">
       <p>
-        <span class="tag is-success">New!</span>
-        <span class="tag is-info">0.4.4</span>
-      </p>
-      <p>
         Add the <code>is-grouped-multiline</code> modifier to allow controls to fill up <strong>multiple lines</strong>. This is ideal for a long list of controls.
       </p>
     </div>
 
     {% include snippet.html content=group_multiline_example clipped=true %}
+
+    <div class="message is-info">
+      <div class="message-header">
+        <p>List of buttons</p>
+      </div>
+      <div class="message-body">
+        <div class="content">
+          <p>
+            If you only need a list of <em>buttons</em>, try out the new <code>buttons</code> class with which you can create a <a href="{{ site.url }}/documentation/elements/button/#list-of-buttons">multiline list of buttons</a>.
+          </p>
+        </div>
+      </div>
+    </div>
 
     {% include anchor.html name="Horizontal form" %}
 
@@ -1004,7 +1011,7 @@ doc-subtab: general
       <p>You can use <code>is-grouped</code> or <code>has-addons</code> for the child elements.</p>
     </div>
 
-    {% include snippet.html content=horizontal_form_example horizontal=true clipped=true %}
+    {% include snippet.html content=horizontal_form_example horizontal=true more=true %}
 
     <div class="content">
       <p>
@@ -1026,7 +1033,54 @@ doc-subtab: general
       </ul>
     </div>
 
-    {% include snippet.html content=field_label_example horizontal=true clipped=true %}
+    {% include snippet.html content=field_label_example horizontal=true more=true %}
+
+    {% include anchor.html name="Variables" %}
+
+    <div class="content">
+      <p>
+        Form elements can be <strong>customized</strong> using the following generic variables. Simply set one or multiple of these variables <em>before</em> importing Bulma. <a href="{{ site.url }}/documentation/overview/customize/">Learn how</a>.
+      </p>
+    </div>
+
+    <table class="table is-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Default value</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Default value</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        {% for key in page.variables_controls_keys %}
+          {% assign variable = site.data.variables.utilities.controls.vars[key] %}
+          <tr>
+            <td>
+              <code>{{ variable.name }}</code>
+            </td>
+            <td>
+              <code>{{ variable.value }}</code>
+            </td>
+          </tr>
+        {% endfor %}
+        {% for key in page.variables_form_keys %}
+          {% assign variable = site.data.variables.elements.form.vars[key] %}
+          <tr>
+            <td>
+              <code>{{ variable.name }}</code>
+            </td>
+            <td>
+              <code>{{ variable.value }}</code>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
 
   </div>
 </section>

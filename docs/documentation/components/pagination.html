@@ -1,44 +1,8 @@
 ---
+title: Pagination
 layout: documentation
 doc-tab: components
 doc-subtab: pagination
-variables:
-- name: $pagination-color
-  value: $grey-darker
-- name: $pagination-background
-  value: $white
-- name: $pagination-border-color
-  value: $grey-lighter
-- name: $pagination-margin
-  value: -0.25rem
-- name: $pagination-hover-color
-  value: $link-hover
-- name: $pagination-hover-border-color
-  value: $link-hover-border
-- name: $pagination-focus-color
-  value: $link-focus
-- name: $pagination-focus-border-color
-  value: $link-focus-border
-- name: $pagination-active-color
-  value: $link-active
-- name: $pagination-active-border-color
-  value: $link-active-border
-- name: $pagination-disabled-color
-  value: $grey
-- name: $pagination-disabled-background-color
-  value: $grey-lighter
-- name: $pagination-disabled-border-color
-  value: $grey-lighter
-- name: $pagination-current-color
-  value: $link-invert
-- name: $pagination-current-background-color
-  value: $link
-- name: $pagination-current-border-color
-  value: $link
-- name: $pagination-ellipsis-color
-  value: $grey-light
-- name: $pagination-shadow-inset
-  value: inset 0 1px 2px rgba($black, 0
 ---
 
 {% capture pagination_example %}
@@ -107,6 +71,22 @@ variables:
 
 {% capture pagination_right_example %}
 <nav class="pagination is-right" role="navigation" aria-label="pagination">
+  <a class="pagination-previous">Previous</a>
+  <a class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture pagination_rounded_example %}
+<nav class="pagination is-rounded" role="navigation" aria-label="pagination">
   <a class="pagination-previous">Previous</a>
   <a class="pagination-next">Next page</a>
   <ul class="pagination-list">
@@ -209,7 +189,7 @@ variables:
       </p>
     </div>
 
-    {% include snippet.html content=pagination_example horizontal=true clipped=true %}
+    {% include snippet.html content=pagination_example horizontal=true more=true %}
 
     <div class="content">
       <p>
@@ -217,7 +197,7 @@ variables:
       </p>
     </div>
 
-    {% include snippet.html content=pagination_options_example horizontal=true clipped=true %}
+    {% include snippet.html content=pagination_options_example horizontal=true more=true %}
 
     <div class="content">
       <p>
@@ -225,9 +205,19 @@ variables:
       </p>
     </div>
 
-    {% include snippet.html content=pagination_centered_example horizontal=true clipped=true %}
+    {% include snippet.html content=pagination_centered_example horizontal=true more=true %}
 
-    {% include snippet.html content=pagination_right_example horizontal=true clipped=true %}
+    {% include snippet.html content=pagination_right_example horizontal=true more=true %}
+
+    {% include anchor.html name="Styles" %}
+
+    {% include elements/new-tag.html version="0.6.2" %}
+
+    <p class="content">
+      Add the <code>is-rounded</code> modifier to have rounded pagination items.
+    </p>
+
+    {% include snippet.html content=pagination_rounded_example horizontal=true more=true %}
 
     {% include anchor.html name="Sizes" %}
 
@@ -236,13 +226,13 @@ variables:
       You only need to append the <strong>modifier</strong> <code>is-small</code>, <code>is-medium</code>, or <code>is-large</code> to the <code>pagination</code> component.
     </p>
 
-    {% include snippet.html content=pagination_small_example horizontal=true clipped=true %}
+    {% include snippet.html content=pagination_small_example horizontal=true more=true %}
 
-    {% include snippet.html content=pagination_medium_example horizontal=true clipped=true %}
+    {% include snippet.html content=pagination_medium_example horizontal=true more=true %}
 
-    {% include snippet.html content=pagination_large_example horizontal=true clipped=true %}
+    {% include snippet.html content=pagination_large_example horizontal=true more=true %}
 
-    {% include variables.html %}
+    {% include variables.html type='component' %}
 
   </div>
 </section>
