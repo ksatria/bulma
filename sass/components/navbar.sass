@@ -14,6 +14,8 @@ $navbar-item-active-color: $black !default
 $navbar-item-active-background-color: transparent !default
 $navbar-item-img-max-height: 1.75rem !default
 
+$navbar-burger-color: $navbar-item-color !default
+
 $navbar-tab-hover-background-color: transparent !default
 $navbar-tab-hover-border-bottom-color: $link !default
 $navbar-tab-active-color: $link !default
@@ -40,6 +42,8 @@ $navbar-dropdown-item-active-background-color: $background !default
 $navbar-divider-background-color: $background !default
 $navbar-divider-height: 2px !default
 
+$navbar-bottom-box-shadow-size: 0 -2px 0 0 !default
+
 =navbar-fixed
   left: 0
   position: fixed
@@ -48,7 +52,6 @@ $navbar-divider-height: 2px !default
 
 .navbar
   background-color: $navbar-background-color
-  box-shadow: $navbar-box-shadow-size $navbar-box-shadow-color
   min-height: $navbar-height
   position: relative
   z-index: $navbar-z
@@ -101,14 +104,14 @@ $navbar-divider-height: 2px !default
     min-height: $navbar-height
     width: 100%
   &.has-shadow
-    box-shadow: 0 2px 3px rgba($black, 0.1)
+    box-shadow: $navbar-box-shadow-size $navbar-box-shadow-color
   &.is-fixed-bottom,
   &.is-fixed-top
     +navbar-fixed
   &.is-fixed-bottom
     bottom: 0
     &.has-shadow
-      box-shadow: 0 -2px 3px rgba($black, 0.1)
+      box-shadow: $navbar-bottom-box-shadow-size $navbar-box-shadow-color
   &.is-fixed-top
     top: 0
 
@@ -138,6 +141,7 @@ body
   overflow-y: hidden
 
 .navbar-burger
+  color: $navbar-burger-color
   +hamburger($navbar-height)
   margin-left: auto
 
@@ -194,7 +198,7 @@ a.navbar-item,
   flex-grow: 1
   flex-shrink: 1
 
-.navbar-link
+.navbar-link:not(.is-arrowless)
   padding-right: 2.5em
   &::after
     +arrow($navbar-dropdown-arrow)
@@ -375,9 +379,9 @@ a.navbar-item,
   .navbar > .container,
   .container > .navbar
     .navbar-brand
-      margin-left: -1rem
+      margin-left: -.75rem
     .navbar-menu
-      margin-right: -1rem
+      margin-right: -.75rem
   // Fixed navbar
   .navbar
     &.is-fixed-bottom-desktop,

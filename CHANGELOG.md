@@ -1,5 +1,28 @@
 # Bulma Changelog
 
+## 0.7.2
+
+### New features
+
+* #1884 New `$navbar-burger-color` variable
+* #1679 Add breakpoint based column gaps
+* #1905 Fix `modal` for IE11 #1902
+* #1919 New `is-arrowless` class for navbar items
+
+### Bug fixes
+
+* #1749 Fix icons floating out of input area
+
+## 0.7.1
+
+### Improvements
+
+* #1789 Add all shades to `has-background-*` helpers
+
+### Bug fixes
+
+* #1796 #1806 Remove navbar `box-shadow` by default
+
 ## 0.7.0
 
 ### New features
